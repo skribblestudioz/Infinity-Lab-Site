@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar</title>
+
+  <!--Raleway-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!--Quicksand-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    * {  margin: 0; 
+         padding: 0;
+         box-sizing: border-box;
+    }    
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .calendar-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 600px;
+      margin: auto;
+      margin-top: 40px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .arrow {
+      font-size: 32px;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+
+    .arrow:hover {
+      color: #007BFF;
+    }
+
+    .event-box {
+      flex: 1;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .event-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .event-info {
+      font-size: 16px;
+      color: #555;
+    }
+    .topnav {
+    background-color: #333;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+
+    }
+    
+    .info-section {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 30px;
+       padding: 40px;
+    }
+
+    .info-section img {
+      max-width: 700px;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .text-content {
+      max-width: 600px;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .text-content p {
+      font-size: 25px;
+      color: #555;
+    }
+
+    .hamburg {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    display: none; /* mobile only :P */
+    }
+
+    .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+    .hamburg {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 54px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        border-top: 1px solid #444;
+        text-align: center;
+    }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+        <div class="hamburg">☰</div>  
+        <div class="nav-links">
+            <a href="landingpage.html">Home</a>
+            <a href="records.html">Contributions</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="blog.html">Blog</a>
+            <a href="members.html">Members</a>
+            <a href="registration.html">Join Us</a>
+        </div>
+        
+   </nav>
+  <div class="mainback">
+    <h1 class="fadeineffect">Upcoming Events</h1>
+  </div>
+  <div class="calendar-container">
+    <div class="arrow" id="prev">&#9664;</div>
+
+    <div class="event-box">
+      <div class="event-title" id="event-title">Loading...</div>
+      <div class="event-info" id="event-info"></div>
+    </div>
+
+    <div class="arrow" id="next">&#9654;</div>
+  </div>
+  <div class="info-section">
+    <img src="https://i.postimg.cc/k5qRb8qX/IMG-2040.jpg">
+  </div>
+
+  <script>
+    const events = [
+      { title: "Game Hosting on August 10", info: "Join us in game hosting for seniors from 2:30-3:45." },
+      { title: "Team Leader Meeting", info: "August 15, 2025 — 3:00 PM" },
+      { title: "Hello", info: "This is a demo paragraph." },
+      { title: "The Testing Block", info: "I'm testing how long these description blurbs can be. I do hope they can reach decently long lengths, since this is probably how long it's going to get in an applicable scenario." }
+    ];
+
+    let currentIndex = 0;
+
+    const titleEl = document.getElementById('event-title');
+    const infoEl = document.getElementById('event-info');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    function showEvent(index) {
+      const event = events[index];
+      titleEl.textContent = event.title;
+      infoEl.textContent = event.info;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + events.length) % events.length;
+      showEvent(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % events.length;
+      showEvent(currentIndex);
+    });
+
+    // Initialize first event
+    showEvent(currentIndex);
+  </script>
+
+</body>
+</html>

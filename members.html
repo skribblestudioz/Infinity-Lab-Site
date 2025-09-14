@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Infinity Lab | Home</title>
+
+  <!--Raleway-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!--Quicksand-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    .fadeineffect{
+
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fadeineffect.v{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mainback {
+
+        background-image: url('https://i.postimg.cc/CxFNsqkB/IMG-3356-JPG.avif');
+        margin-top: 0px;
+        margin-bottom: 100px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 155px 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 100px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
+    }
+    h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 100px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
+    }
+    .intro {
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      color: gray;
+      text-align: center;
+    }
+    .important {
+      font-family: 'Raleway', sans-serif;
+      color: red;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .topnav {
+    background-color: #333;
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+
+    }
+    
+    .info-section {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 30px;
+       padding: 40px;
+    }
+
+    .info-section img {
+      max-width: 700px;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .text-content {
+      max-width: 600px;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .text-content p {
+      font-size: 25px;
+      color: #555;
+    }
+
+    .hamburg {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    display: none; /* mobile only :P */
+    }
+
+    .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+    .hamburg {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 54px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        border-top: 1px solid #444;
+        text-align: center;
+    }
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  
+    <nav class="topnav">
+        <div class="hamburg">☰</div>  
+        <div class="nav-links">
+            <a href="landingpage.html">Home</a>
+            <a href="records.html">Contributions</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="blog.html">Blog</a>
+            <a href="members.html">Members</a>
+            <a href="registration.html">Join Us</a>
+        </div>
+        
+    </nav>
+  <div class="mainback">
+    <h1 class="fadeineffect">Join Us</h1>
+  </div>
+  <div class="info-section">
+     <img src="https://i.postimg.cc/vB4BNrpP/251887-c8b6179180d74e41bbbbf77f1812b6db-mv2.avif">
+     <div class="text-content">
+        <h2>Join Us</h2>
+        <p>Infinity Lab is a group of students dedicated to using our talents 
+            to illuminate the lives of others through our musical performances and free educational services. 
+            Our mission is to create memorable experiences that 
+            enrich the lives of people and foster a sense of community through various pastimes. 
+            If any senior centers, libraries, or other organizations would like us to perform or give free education 
+            about music or STEM subjects at their location, please contact us.</p>
+     </div>
+  </div>
+
+  <p class="intro fadeineffect">Hello.</p>
+  <p class="important fadeineffect">This is important.</p>
+
+    <script>
+    // Fade-in effect
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            document.querySelectorAll('.fadeineffect').forEach((el) => {
+                el.classList.add('v');
+            });
+        }, 10); // small delay to ensure transition
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburg = document.querySelector('.hamburg');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburg.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    });
+    </script>
+    
+
+</body>
+</html>
