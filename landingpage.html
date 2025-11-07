@@ -1,272 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Infinity Lab | Home</title>
 
-  <!--Raleway-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
-  <!--Quicksand-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <!--Mondserrat-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Raleway:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
-    .fadeineffect{
-
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
+    /* Smooth fade-in animation */
+    .fadeineffect {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
     }
-    .fadeineffect.v{
-        opacity: 1;
-        transform: translateY(0);
+    .fadeineffect.v {
+      opacity: 1;
+      transform: translateY(0);
     }
 
+    /* Base Styles */
     body {
       font-family: 'Raleway', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: lightblue;
+      background-color: #eaf4fb;
+      color: #333;
+      line-height: 1.6;
     }
 
+    /* Navigation Bar */
+    .topnav {
+      background-color: #f2e8db;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links a {
+      color: #476f9c;
+      text-decoration: none;
+      padding: 10px 18px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 18px;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+
+    .nav-links a:hover {
+      background-color: #476f9c;
+      color: white;
+    }
+
+    .hamburg {
+      font-size: 28px;
+      color: #476f9c;
+      cursor: pointer;
+      display: none;
+    }
+
+    /* Hero Section */
     .mainback {
-
-        background-image: url('https://i.postimg.cc/FstptDmy/IMG-3224.jpg');
-        margin-top: 0px;
-        margin-bottom: 100px;
-        margin-left: 0px;
-        margin-right: 0px;
-        padding: 155px 20px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center 30%;
-
-
+      background-image: url('https://i.postimg.cc/FstptDmy/IMG-3224.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      padding: 180px 20px;
+      text-align: center;
     }
 
     h1 {
-       color: #ffffff;
-      font-size: 48px;
-      text-align: center;
-      text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #476f9c,
-        0 0 82px #476f9c,
-        0 0 92px #476f9c,
-        0 0 102px #476f9c,
-        0 0 151px #476f9c;
+      color: white;
       font-family: 'Quicksand', sans-serif;
-      font-size: 100px;
-      text-align: center;
+      font-size: 80px;
+      text-shadow: 0 0 10px #fff, 0 0 40px #476f9c;
+      margin: 0;
+    }
 
-    }
-    .intro {
-      font-family: 'Raleway', sans-serif;
-      font-size: 20px;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      max-width: 900px; 
-    }
-    .important {
-      font-family: 'Raleway', sans-serif;
-      color: red;
-      font-weight: bold;
-      text-align: center;
-    }
-    
-    .topnav {
-    background-color: #f2e8db;
-    overflow: visible;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    }
-    
+    /* Info Section */
     .info-section {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       gap: 30px;
-       padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      background-color: #fff;
+      border-radius: 16px;
+      margin: 40px auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
     .info-section img {
-      max-width: 700px;
-      height: auto;
+      width: 100%;
+      max-width: 550px;
       border-radius: 16px;
+      object-fit: cover;
     }
 
     .text-content {
       max-width: 600px;
-      font-family: 'Raleway', sans-serif;
     }
 
     .text-content p {
-      font-size: 25px;
-      color: #555;
+      font-size: 20px;
+      color: #444;
     }
 
-    .hamburg {
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-    display: none; /* mobile only :P */
-    }
-
-    .nav-links a {
-    color: #4c73a0;
-    text-decoration: none;
-    padding: 10px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-    transition: background-color 0.3s;
-    }
-
-    .nav-links a:hover {
-    background-color: #575757;
-    border-radius: 4px;
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-    .hamburg {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 54px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        border-top: 1px solid #444;
-        text-align: center;
-    }
-    }
-
-    .image-section {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       gap: 30px;
-    }
+    /* Main Content */
     .center-block {
       max-width: 900px;
       margin: 0 auto;
       text-align: center;
+      padding: 60px 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
+    .intro {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 20px;
+    }
 
-    
+    .important {
+      color: red;
+      font-weight: bold;
+    }
 
+    .image-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    .image-section img {
+      max-width: 90%;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hamburg {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #f2e8db;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        border-top: 1px solid #ddd;
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+
+      .info-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
   </style>
 </head>
+
 <body>
-  
-    <nav class="topnav">
-        <div class="hamburg">☰</div>  
-        <div class="nav-links">
-            <a href="landingpage.html">Home</a>
-            <a href="records.html">Contributions</a>
-            <a href="registration.html">Join Us</a>
-        </div>
-        
-    </nav>
+  <nav class="topnav">
+    <div class="hamburg">☰</div>
+    <div class="nav-links">
+      <a href="landingpage.html">Home</a>
+      <a href="records.html">Contributions</a>
+      <a href="registration.html">Join Us</a>
+    </div>
+  </nav>
+
   <div class="mainback">
     <h1 class="fadeineffect">Welcome to Infinity Lab!</h1>
   </div>
-  <div class="info-section">
-     <img src="https://i.postimg.cc/MpJKXQ8P/Q9A6015.jpg" alt="Oh hello">
-     <div class="text-content">
-        <p>Infinity Lab is a student-run organization bringing music and joy to seniors and providing learning opportunities to children in communities that need them.</p>
-     </div>
-  </div>
-<div class="center-block fadeineffect">
-  <p class="intro fadeineffect">Organization Information</p>
-  <p class="intro fadeineffect">Organization Name: Infinity Lab</p>
-  <p class="intro fadeineffect">Organization Type: Nonprofit Public Benefit Corporation (California)</p>
-  <p class="intro fadeineffect">Mission and Objectives:</p>
-  <p class="intro fadeineffect">Infinity Lab is committed to building a platform that empowers
-           musically talented and tech-savvy youth to serve the community. 
-           Through music performance, gaming activities, technology outreach to seniors, 
-           and mentorship for children with limited access to educational resources, 
-           these young volunteers are encouraged to take initiative in public service while developing leadership, communication, and organizational skills.
-We engage youth from resource-rich neighborhoods in San Diego and connect them with underserved communities in the southern region. By facilitating the flow of knowledge and opportunities within the same city, 
-we aim to create a positive social impact, reduce educational inequities, and promote long-term community well-being.</p>
 
-  <div class = "image-section">
-      <img src="https://i.postimg.cc/50DT28Fn/IMG-1988.jpg">
+  <div class="info-section fadeineffect">
+    <img src="https://i.postimg.cc/MpJKXQ8P/Q9A6015.jpg" alt="Oh hello" />
+    <div class="text-content">
+      <p>Infinity Lab is a student-run organization bringing music and joy to seniors and providing learning opportunities to children in communities that need them.</p>
+    </div>
   </div>
 
-  <p class="intro fadeineffect">Primary Activities <br> <br>
+  <div class="center-block fadeineffect">
+    <p class="intro"><strong>Organization Information</strong></p>
+    <p class="intro">Organization Name: <strong>Infinity Lab</strong></p>
+    <p class="intro">Type: Nonprofit Public Benefit Corporation (California)</p>
+    <p class="intro"><strong>Mission and Objectives</strong></p>
+    <p>Infinity Lab is committed to empowering musically talented and tech-savvy youth to serve the community. Through music performances, gaming activities, technology outreach to seniors, and mentorship for children, we foster leadership and communication skills while promoting community well-being.</p>
 
- Nursing Home Services <br>
+    <div class="image-section fadeineffect">
+      <img src="https://i.postimg.cc/50DT28Fn/IMG-1988.jpg" alt="Performance Image" />
+    </div>
 
-We recruit talented and community-minded youth volunteers and collaborate with local senior homes to provide musical performances for nursing home residents to enrich their cultural and spiritual lives. Organize interactive games to enhance the physical and mental well-being and social connections of the elderly.
+    <p class="intro"><strong>Primary Activities</strong></p>
+    <p><strong>Nursing Home Services:</strong> We recruit youth volunteers to perform music and organize interactive games to enhance seniors' well-being.</p>
+    <p><strong>Children’s Education at Libraries:</strong> We collaborate with libraries to offer free educational programs in music, art, and STEAM for children in under-resourced areas.</p>
 
- Children's Education at Libraries <br>
-We recruit talented and community-minded youth volunteers and collaborate with local libraries to offer free classes or extracurricular activities in areas with limited access to educational resources. These programs include, but are not limited to, music, art, and STEAM, aiming to enrich children's after-school experiences, spark their interests and hobbies, broaden their horizons, and inspire early career exploration.</p>
+    <div class="image-section fadeineffect">
+      <img src="https://i.postimg.cc/xCmgghc3/IMG-1895.jpg" alt="Education Event" />
+    </div>
 
-  <p class="intro fadeineffect">Infinity Lab is a California-based nonprofit public benefit organization. It has not applied for 501(c)(3) tax-exempt status and therefore is not eligible to sponsor the President’s Volunteer Service Award.
+    <p>Infinity Lab is a California-based nonprofit public benefit organization. It has not applied for 501(c)(3) tax-exempt status. Volunteer hours are tracked and recorded after each service, and records can be accessed by members at any time.</p>
+  </div>
 
-Volunteer service hours recorded by the organization may or may not be accepted by other institutions, depending on their individual policies.
-
-The organization will track volunteer hours after each service and share records with each volunteer.Official members may access their service records at any time. If there is a discrepancy, a correction request must be submitted within a week of the new record’s release. No changes will be made after that period.
-
-Service hours for guest performers will be documented and provided upon request, after confirmation by the individual.
-
-</p>
-</div>
-<div class = "image-section">
-      <img src="https://i.postimg.cc/xCmgghc3/IMG-1895.jpg">
-</div>
-
-    <script>
-    // Fade-in effect
-    window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-            document.querySelectorAll('.fadeineffect').forEach((el) => {
-                el.classList.add('v');
-            });
-        }, 10); // small delay to ensure transition
+  <script>
+    // Fade-in animation
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.querySelectorAll(".fadeineffect").forEach((el) => el.classList.add("v"));
+      }, 10);
     });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const hamburg = document.querySelector('.hamburg');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburg.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+    // Mobile navigation toggle
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburg = document.querySelector(".hamburg");
+      const navLinks = document.querySelector(".nav-links");
+      hamburg.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
     });
-    </script>
-
+  </script>
 </body>
 </html>
