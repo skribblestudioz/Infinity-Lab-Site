@@ -4,21 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Infinity Lab | Home</title>
+  <title>Infinity Lab | Join Us</title>
 
-  <!--Raleway-->
+  <!--Raleway + Quicksand-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
-  <!--Quicksand-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Fade-in */
     .fadeineffect{
-
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 1s ease-out, transform 1s ease-out;
@@ -28,143 +23,156 @@
         transform: translateY(0);
     }
 
+    /* Global */
     body {
       font-family: 'Raleway', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: lightblue;
+      background-color: #cfe6f5; /* soft blue */
     }
 
-    .mainback {
-
-        background-image: url('https://i.postimg.cc/QdHTY5Dc/IMG-3356.jpg');
-        margin-top: 0px;
-        margin-bottom: 100px;
-        margin-left: 0px;
-        margin-right: 0px;
-        padding: 155px 20px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-    }
-
-    h1 {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 100px;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-
-    }
-    h2 {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 100px;
-      color: rgb(0, 0, 0);
-      text-align: center;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-
-    }
-    .intro {
-      font-family: 'Raleway', sans-serif;
-      font-size: 20px;
-      color: gray;
-      text-align: center;
-    }
-    .important {
-      font-family: 'Raleway', sans-serif;
-      color: red;
-      font-weight: bold;
-      text-align: center;
-    }
-    
+    /* Navigation */
     .topnav {
-    background-color: #f2e8db;
-    overflow: visible;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    position: relative;
-
-    }
-    
-    .info-section {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       gap: 30px;
-       padding: 20px;
-    }
-
-    .info-section img {
-      max-width: 700px;
-      height: auto;
-      border-radius: 16px;
-    }
-
-    .text-content {
-      max-width: 900px;
-      font-family: 'Raleway', sans-serif;
-      text-align: center;
-    }
-
-    .text-content p {
-      font-size: 25px;
-      color: #555;
+      background-color: #f2e8db;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 12px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
     }
 
     .hamburg {
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-    display: none; /* mobile only :P */
+      font-size: 26px;
+      color: #4c73a0;
+      cursor: pointer;
+      display: none;
+      padding: 5px 10px;
     }
 
     .nav-links a {
-    color: #4c73a0;
-    text-decoration: none;
-    padding: 10px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-    transition: background-color 0.3s;
+      color: #4c73a0;
+      text-decoration: none;
+      padding: 12px 18px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 18px;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .nav-links a:hover {
-    background-color: #575757;
-    border-radius: 4px;
+      background-color: #4c73a0;
+      color: white;
+    }
+
+    /* Banner */
+    .mainback {
+      background-image: url('https://i.postimg.cc/QdHTY5Dc/IMG-3356.jpg');
+      padding: 170px 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+    }
+
+    .mainback h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 85px;
+      color: #ffffff;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+      margin: 0;
+    }
+
+    /* Content Section */
+    .info-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .text-content p {
+      font-size: 22px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .text-content a {
+      color: #3b6ea8;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .text-content a:hover {
+      text-decoration: underline;
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .image-section img {
+      max-width: 85%;
+      border-radius: 16px;
+      box-shadow: 0px 5px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #f2e8db;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 60px;
+      font-size: 18px;
+      color: #4c73a0;
+      font-family: 'Quicksand', sans-serif;
+      border-top: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .footer strong {
+      font-size: 20px;
     }
 
     /* Mobile */
     @media (max-width: 768px) {
-    .hamburg {
+      .hamburg {
         display: block;
-    }
-
-    .nav-links {
+      }
+      .nav-links {
         display: none;
         flex-direction: column;
-        gap: 0;
         width: 100%;
-        background-color: #333;
+        background-color: #f2e8db;
         position: absolute;
-        top: 54px;
-    }
+        right: 0;
+        top: 60px;
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      }
 
-    .nav-links.active {
+      .nav-links.active {
         display: flex;
-    }
+      }
 
-    .nav-links a {
-        border-top: 1px solid #444;
-        text-align: center;
-    }
-    }
+      .nav-links a {
+        text-align: right;
+        padding: 14px 20px;
+      }
 
-    
+      .mainback h1 {
+        font-size: 55px;
+      }
+
+      .text-content p {
+        font-size: 20px;
+      }
+    }
 
   </style>
 </head>
@@ -177,63 +185,72 @@
             <a href="records.html">Contributions</a>
             <a href="registration.html">Join Us</a>
         </div>
-        
     </nav>
-  <div class="mainback">
-    <h1 class="fadeineffect">Join Us</h1>
-  </div>
-  <div class="info-section">
-     <div class="text-content">
-        <p>Our team needs student volunteers! <br>
 
-Jobs: Performing music to seniors, & hosting board games for seniors. <br>
+    <div class="mainback fadeineffect">
+      <h1>Join Us</h1>
+    </div>
 
-You are expected to commit 1-3 hours a month on Sunday afternoons. We warmly welcome students with artistic talent and a passion for
+    <div class="info-section fadeineffect">
+      <div class="text-content">
+        
+        <p>Our team needs student volunteers!<br><br>
+        Jobs: Performing music for seniors & hosting board games.<br><br>
+        Expected commitment: 1–3 hours per month on Sunday afternoons.<br><br>
+        We welcome students with artistic talent and passion for performance.<br>
+        Priority: violin, flute, clarinet, harp, guitar, saxophone, voice, dance.
+        </p>
 
-performance to join us at any time. (Priority: Violinists, flutists, clarinet,
+        <p>
+          If you are interested in becoming a performer, fill out  
+          <a href="https://forms.gle/AJeUpEBMXneDnPe4A">this form</a>.<br><br>
 
-harpists, guitarists, saxophonists, singers, and dancers) <br>
+          If you want to host board games, fill out  
+          <a href="https://forms.gle/2TYzxrV2psxvjXix6">this form</a>.<br><br>
 
-If you are interested in becoming a performer, fill out <a href="https://forms.gle/AJeUpEBMXneDnPe4A">this form</a>. <br>
+          Or contact us at <u>infinitylab2024@gmail.com</u>.
+        </p>
 
+        <p>
+          <strong>About Service Hours:</strong><br>
+          Our organization is a California nonprofit public-benefit group (not 501(c)(3)).  
+          We record service hours and provide certification on request.  
+          Acceptance of hours depends on the receiving organization.
+        </p>
 
-If you are interested in hosting board games, fill out <a href="https://forms.gle/2TYzxrV2psxvjXix6">this form</a>.<br>
+        <div class="image-section">
+          <img src="https://i.postimg.cc/vmPdpnsn/image.png" alt="Volunteering Image">
+        </div>
 
-Or contact us at infinitylab2024@gmail.com <br> <br>
+      </div>
+    </div>
 
-About Service Hours: <br>
-
-Our organization is a nonprofit volunteer group (Nonprofit Corporation - CA - Public Benefit), 
-but does not have 501(c)(3) status. 
-We record service hours for all volunteers and provide certification upon request. 
-Recognition of volunteer hours completed with us depends on acceptance by other organizations.</p>
-
-<div class = "image-section">
-      <img src="https://i.postimg.cc/zfF7cLwW/IMG-1895-2.jpg">
-</div>
-     </div>
-  </div>
+    <!-- Footer -->
+    <div class="footer">
+      <strong>Infinity Lab</strong><br>
+      Contact us at: <u>infinitylabsd@gmail.com</u>
+    </div>
 
     <script>
-    // Fade-in effect
-    window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-            document.querySelectorAll('.fadeineffect').forEach((el) => {
-                el.classList.add('v');
-            });
-        }, 10); // small delay to ensure transition
-    });
+      // Fade-in
+      window.addEventListener('DOMContentLoaded', () => {
+          setTimeout(() => {
+              document.querySelectorAll('.fadeineffect').forEach(el => {
+                  el.classList.add('v');
+              });
+          }, 50);
+      });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const hamburg = document.querySelector('.hamburg');
-        const navLinks = document.querySelector('.nav-links');
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', () => {
+          const hamburg = document.querySelector('.hamburg');
+          const navLinks = document.querySelector('.nav-links');
 
-        hamburg.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    });
+          hamburg.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+          });
+      });
     </script>
-    
 
 </body>
 </html>
