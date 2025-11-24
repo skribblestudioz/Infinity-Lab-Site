@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Infinity Lab | Join Us</title>
 
-  <!--Raleway + Quicksand-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* Fade-in */
-    .fadeineffect{
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
+    .fadeineffect {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
     }
-    .fadeineffect.v{
-        opacity: 1;
-        transform: translateY(0);
+    .fadeineffect.v {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    /* Global */
+    /* Base */
     body {
-      font-family: 'Raleway', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #cfe6f5; /* soft blue */
+      background-color: #cfe6f5;
+      font-family: 'Raleway', sans-serif;
+      color: #333;
     }
 
     /* Navigation */
@@ -42,14 +42,6 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .hamburg {
-      font-size: 26px;
-      color: #4c73a0;
-      cursor: pointer;
-      display: none;
-      padding: 5px 10px;
     }
 
     .nav-links a {
@@ -67,51 +59,92 @@
       color: white;
     }
 
+    .hamburg {
+      font-size: 28px;
+      color: #4c73a0;
+      cursor: pointer;
+      display: none;
+    }
+
     /* Banner */
     .mainback {
       background-image: url('https://i.postimg.cc/QdHTY5Dc/IMG-3356.jpg');
-      padding: 170px 20px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      padding: 250px 20px;
       text-align: center;
     }
 
     .mainback h1 {
+      color: white;
       font-family: 'Quicksand', sans-serif;
-      font-size: 85px;
-      color: #ffffff;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+      font-size: 90px;
       margin: 0;
+      text-shadow: 0 0 10px #ffffff, 0 0 35px #4c73a0, 0 0 60px #4c73a0;
     }
 
-    /* Content Section */
+    /* Info Section (Landing-page style) */
     .info-section {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 50px auto;
+      background: #ffffff;
       border-radius: 16px;
+      padding: 50px 40px;
+      max-width: 1200px;
       box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
     }
 
-    .text-content p {
-      font-size: 22px;
+    .text-content {
+      font-size: 20px;
       color: #444;
       line-height: 1.6;
-      margin-bottom: 20px;
     }
 
     .text-content a {
-      color: #3b6ea8;
-      font-weight: 600;
+      color: #4c73a0;
+      font-weight: 700;
       text-decoration: none;
+      background-color: rgba(76,115,160,0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: 0.25s;
     }
 
     .text-content a:hover {
-      text-decoration: underline;
+      background-color: #4c73a0;
+      color: white;
     }
 
+    /* Center-block sections like landing page */
+    .center-block {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 50px 40px;
+      box-shadow: 0 4px 22px rgba(0,0,0,0.1);
+      font-size: 19px;
+      color: #444;
+    }
+
+    .center-block h2 {
+      font-family: 'Quicksand', sans-serif;
+      color: #4c73a0;
+      margin-top: 10px;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .center-block ul {
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+
+    /* Image section */
     .image-section {
       text-align: center;
       margin-top: 30px;
@@ -120,7 +153,7 @@
     .image-section img {
       max-width: 85%;
       border-radius: 16px;
-      box-shadow: 0px 5px 12px rgba(0,0,0,0.15);
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
     }
 
     /* Footer */
@@ -141,9 +174,8 @@
 
     /* Mobile */
     @media (max-width: 768px) {
-      .hamburg {
-        display: block;
-      }
+      .hamburg { display: block; }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -156,101 +188,121 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       }
 
-      .nav-links.active {
-        display: flex;
-      }
+      .nav-links.active { display: flex; }
 
       .nav-links a {
         text-align: right;
         padding: 14px 20px;
       }
 
-      .mainback h1 {
-        font-size: 55px;
-      }
-
-      .text-content p {
-        font-size: 20px;
-      }
+      .mainback h1 { font-size: 55px; }
     }
-
   </style>
 </head>
+
 <body>
-  
-    <nav class="topnav">
-        <div class="hamburg">☰</div>  
-        <div class="nav-links">
-            <a href="landingpage.html">Home</a>
-            <a href="records.html">Contributions</a>
-            <a href="registration.html">Join Us</a>
-        </div>
-    </nav>
-
-    <div class="mainback fadeineffect">
-      <h1>Join Us</h1>
+  <!-- Navigation -->
+  <nav class="topnav">
+    <div class="hamburg">☰</div>
+    <div class="nav-links">
+      <a href="landingpage.html">Home</a>
+      <a href="records.html">Contributions</a>
+      <a href="registration.html">Join Us</a>
     </div>
+  </nav>
 
-    <div class="info-section fadeineffect">
-      <div class="text-content">
-        
-        <p>Our team needs student volunteers!<br><br>
-        Jobs: Performing music for seniors & hosting board games.<br><br>
-        Expected commitment: 1–3 hours per month on Sunday afternoons.<br><br>
-        We welcome students with artistic talent and passion for performance.<br>
-        Priority: violin, flute, clarinet, harp, guitar, saxophone, voice, dance.
-        </p>
+  <!-- Banner -->
+  <div class="mainback fadeineffect">
+    <h1>Join Us</h1>
+  </div>
 
-        <p>
-          If you are interested in becoming a performer, fill out  
-          <a href="https://forms.gle/AJeUpEBMXneDnPe4A">this form</a>.<br><br>
+  <!-- Intro Section -->
+  <div class="info-section fadeineffect">
+    <div class="text-content">
+      <p>Our team needs student volunteers! We offer opportunities for students to perform music, tutor children, and lead engaging activities for seniors and youth.</p>
 
-          If you want to host board games, fill out  
-          <a href="https://forms.gle/2TYzxrV2psxvjXix6">this form</a>.<br><br>
+      <p><strong>Available Roles:</strong></p>
+      <p>
+        Performers (instrumental, vocal, dance) – elementary to high school  
+        <br> 👉 <a href="https://forms.gle/AJeUpEBMXneDnPe4A">Fill out this form</a>
+      </p>
 
-          Or contact us at <u>infinitylab2024@gmail.com</u>.
-        </p>
+      <p>
+        Tutors (chess, art, singing) – high school  
+        <br> 👉 <a href="https://forms.gle/2TYzxrV2psxvjXix6">Fill out this form</a>
+      </p>
 
-        <p>
-          <strong>About Service Hours:</strong><br>
-          Our organization is a California nonprofit public-benefit group (not 501(c)(3)).  
-          We record service hours and provide certification on request.  
-          Acceptance of hours depends on the receiving organization.
-        </p>
+      <p>
+        Library Assistants – 7th grade and up  
+        <br> 👉 <a href="https://forms.gle/7oxVgkWSzxqZiNNz6">Fill out this form</a>
+      </p>
 
-        <div class="image-section">
-          <img src="https://i.postimg.cc/vmPdpnsn/image.png" alt="Volunteering Image">
-        </div>
+      <p>
+        Senior Home Activity Helpers – 7th–12th grade  
+        <br> 👉 <a href="https://forms.gle/hBdaDUijYTEXeW3r7">Fill out this form</a>
+      </p>
 
+      <p>Contact us anytime: <strong>infinitylab2024@gmail.com</strong></p>
+
+      <div class="image-section">
+        <img src="https://i.postimg.cc/vmPdpnsn/image.png" alt="Volunteering Image">
       </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <div class="footer">
-      <strong>Infinity Lab</strong><br>
-      Contact us at: <u>infinitylabsd@gmail.com</u>
-    </div>
+  <!-- I might work on this later. -->
+  <div class="center-block fadeineffect">
+    <h2>Time Commitment</h2>
+    <p>● Volunteers commit <strong>1–3 hours per month</strong>, typically on weekends.<br>
+    ● All volunteer hours are tracked and certified upon request.</p>
+  </div>
 
-    <script>
-      // Fade-in
-      window.addEventListener('DOMContentLoaded', () => {
-          setTimeout(() => {
-              document.querySelectorAll('.fadeineffect').forEach(el => {
-                  el.classList.add('v');
-              });
-          }, 50);
+  <div class="center-block fadeineffect">
+    <h2>Why Join Us?</h2>
+    <ul>
+      <li>Earn official volunteer service hours</li>
+      <li>Gain leadership and teaching experience</li>
+      <li>Perform, tutor, or lead activities</li>
+      <li>Strengthen your high school resume</li>
+      <li>Meet inspiring peers and mentors</li>
+    </ul>
+  </div>
+
+  <div class="center-block fadeineffect">
+    <h2>Supervision</h2>
+    <p>All activities are supervised by adult coordinators to ensure a safe, supportive environment for every volunteer.</p>
+  </div>
+
+  <div class="center-block fadeineffect">
+    <h2>Service Hour Policy</h2>
+    <p>Infinity Lab is a California nonprofit public benefit group (not 501(c)(3)).  
+    Hours can be certified; acceptance depends on the receiving organization.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <strong>Infinity Lab</strong><br>
+    Contact us at: <u>infinitylabsd@gmail.com</u>
+  </div>
+
+  <script>
+    // Fade-in
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.querySelectorAll(".fadeineffect").forEach(el => el.classList.add("v"));
+      }, 30);
+    });
+
+    // Mobile Navigation
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburg = document.querySelector(".hamburg");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburg.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
       });
-
-      // Mobile menu toggle
-      document.addEventListener('DOMContentLoaded', () => {
-          const hamburg = document.querySelector('.hamburg');
-          const navLinks = document.querySelector('.nav-links');
-
-          hamburg.addEventListener('click', () => {
-              navLinks.classList.toggle('active');
-          });
-      });
-    </script>
+    });
+  </script>
 
 </body>
 </html>
